@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section id="blog-section">
+            <h2>My XD Blogs</h2>
+            <!-- Thẻ blog, khi bấm vào sẽ hiển thị danh sách -->
+            <div class="blog-card" onclick="toggleBlogs()">
+                <a>Show Blogs</a>
+            </div>
+
+            <!-- Danh sách blog, sẽ ẩn mặc định -->
+            <ul id="blog-list" class="hidden">
+                <!-- Các bài blog sẽ được thêm vào đây -->
+            </ul>
+        </section>
+        <script src="script.js"></script>
+        <footer class="back-home">
+            <a href="../index.html">Back to Home</a>
+        </footer>
+    </body>
+</html>

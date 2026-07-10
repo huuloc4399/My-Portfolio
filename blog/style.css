@@ -1,0 +1,62 @@
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+h2 {
+    text-align: left;
+}
+
+.blog-card {
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    margin: 20px 0;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.blog-card:hover {
+    color:#FF6347;
+}
+
+#blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+#blog-list li {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ẩn danh sách dự án mặc định */
+.hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none; /* A distinct color for links */
+    color: black;
+  }
+  
+  a:hover {
+    color: #FF6347; /* A different color when hovering */
+  }
+html {
+    background-image: url('https://kilala.vn/data/emagazine/images/vol45/hatsune-miku/hatsune-miku-background.jpg');
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+.back-home{
+    text-align: right;
+    color: white;
+}
