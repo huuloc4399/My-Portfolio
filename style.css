@@ -1,30 +1,39 @@
 body {
     font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
-    min-height: 100vh; 
-    margin: 0px;
-}
-
-header {
-    display: flex;
-    align-items: flex-start; 
-    padding: 10px 20px;
-    position: relative;
-}
-
-
-.varela-round-regular {
-    font-family: "Varela Round", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    min-height: 100vh;
+    margin: 0;
 }
 
 html {
     background-image: url('/pics/hatsune-miku-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position:right;
+    background-position: right;
     background-attachment: fixed;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+    background-image: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    z-index: 10;
+    margin-right: auto;
 }
 
 div {
@@ -33,135 +42,74 @@ div {
 }
 
 p.vl {
-    word-wrap:normal;
+    word-wrap: normal;
 }
 
-.menu-container {
-    position: relative;
-    display: inline-block;
-}
-
-.menu {
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-}
-
-/* Ẩn phần lựa chọn mặc định */
-.options {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px;
-    z-index: 1;
-}
 a {
-    text-decoration: none; /* Bỏ gạch chân dưới liên kết */
-    color: #ffffff; /* Màu xanh cho liên kết */
+    text-decoration: none;
+    color: #ffffff;
     font-size: 18px;
     margin: 10px;
-}
-a:hover {
-    color: #FF6347; /* Đổi màu khi hover vào liên kết */
+    transition: color 0.3s ease;
 }
 
-/* Tạo không gian cho các liên kết */
-.link-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 200px;
-    margin: auto;
+a:hover {
+    color: #FF6347;
 }
+
 .menu-icon {
     font-size: 30px;
     color: white;
     cursor: pointer;
-    display: none; 
-    position:absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
+    display: none;
+    z-index: 20;
 }
-nav#navbar {
-    margin-left: auto;
-}
-nav ul {
+
+nav#navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-nav ul li {
+nav#navbar ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
-    text-decoration: none;
+nav#navbar ul li a {
     padding: 10px 20px;
     display: block;
-}
-
-/* Thiết lập cho di động */
-@media (max-width: 880px) {
-    .menu-icon {
-        display: block; /* Hiện icon trên thiết bị di động */
-    }
-    .dark-mode-toggle {
-    }
-
-    nav#navbar {
-        display: none; /* Ẩn nav trên di động theo mặc định */
-        position: absolute;
-        top: 60px; /* Đặt dưới header */
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Nền tối mờ để dễ đọc chữ */
-    }
-
-    nav#navbar.active {
-        display: block; /* Hiển thị nav khi có class active */
-    }
-
-    nav#navbar ul {
-        flex-direction: column; /* Sắp xếp các mục theo cột */
-        width: 100%;
-    }
-
-    nav#navbar ul li {
-        margin: 0;
-    }
-
-    nav#navbar ul li a {
-        text-align: center;
-        padding: 15px;
-        color: white; /* Chữ trắng trên nền tối */
-        border-bottom: 1px solid #eee;
-    }
-}
-/*test*/
-body {
-    line-height: 1.6;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
 }
 
 main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    padding-top: 100px;
+    padding: 100px 20px 20px 20px;
 }
 
-.blog-post {
-    margin-bottom: 30px;
+.blog-card {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 20px 0;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.dark-mode .blog-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #FF6347;
 }
 
 .post-date {
@@ -169,72 +117,120 @@ main {
     font-style: italic;
 }
 
-.read-more {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.dark-mode .post-date {
+    color: #aaa;
 }
-
 
 video {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: x-large;
+    border-radius: 50%;
+    border: 2px solid #f9f9f9;
+    padding: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+}
+
+button:hover {
+    border-color: #333;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode button {
+    border-color: #555;
+    color: white;
+}
+
+.dark-mode button:hover {
+    border-color: #fff;
+}
+
+.dark-mode-toggle {
+    margin-left: 20px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    order: 2;
+}
+
+nav#navbar {
+    order: 1;
+}
+
+@media (max-width: 880px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+
+    .dark-mode-toggle {
+        position: absolute;
+        right: 70px;
+        top: 20px;
+        margin-left: 0;
+    }
+
+    nav#navbar {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        left: auto;
+        width: max-content;
+        min-width: 180px;
+        background-color: rgba(25, 25, 25, 0.95);
+        z-index: 15;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    nav#navbar.active {
+        display: block;
+    }
+
+    nav#navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav#navbar ul li {
+        margin: 0;
+        width: 100%;
+    }
+
+    nav#navbar ul li a {
+        text-align: right;
+        padding: 15px 20px;
+        color: #ffffff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    nav#navbar ul li:last-child a {
+        border-bottom: none;
+    }
 }
 
 @media (max-width: 768px) {
     html {
         background-image: url('/pics/20241001_230109.jpg');
-        background-repeat: repeat-y;
+        background-repeat: no-repeat;
         background-size: cover;
-        background-position: top;
+        background-position: center;
+        background-attachment: fixed;
     }
 }
-.blog-card {
-    color: rgb(0, 0, 0);
-    padding: 0px;
-    margin: 20px 0;
-    text-align: left;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin: 10px 0;
-    padding: 10px;
-}
-.blog-card:hover{
-    color:#FF6347;
-}
-.dark-mode-toggle {
-    z-index: 1002; 
-    position: relative; 
-    order: 1; 
-}
-
-.dark-mode-toggle button {
-    padding: 5px;
-    line-height: 1;
-    border: 1px solid;
-}
-.dark-mode {
-    background-color: black;
-    color: white;
-    background-image: none;
-
-  }
-  button{
-    background-color: transparent;
-    cursor: pointer;
-    text-align:justify;
-    font-size: x-large;
-    border-radius: 100px;
-    border-color: #f9f9f9;
-    position: relative;
-  }
-  button:hover{
-    border-color: #000000;
-    border-radius: 150px;
-  }
