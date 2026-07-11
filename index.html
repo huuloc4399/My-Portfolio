@@ -1,52 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-        
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>huuloc4399</title>
-        <link rel="icon" href="https://avatars.githubusercontent.com/u/183447089?s=48&v=4" />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <header>
-            <a href="index.html" class="logo">Home</a>
-            <div class="dark-mode-toggle">
-                <button onclick="myFunction()">🌙</button>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>huuloc4399</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/183447089?s=48&v=4" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Home</a>
+        <div class="dark-mode-toggle">
+            <button onclick="myFunction()">🌙</button>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="https://github.com/huuloc4399">Github</a></li>
+                <li><a href="blog/blog.html">Blogs</a></li>
+                <li><a href="project/project.html">Projects</a></li>
+                <li><a href="https://www.facebook.com/huuloc4399.miku/">Facebook</a></li>
+                <li><a href="/assets/2001230468_Nguyễn Hữu Lộc.pdf" target="_blank">My CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h1>My portfolio</h1>
+            <p>Hi, I am Nguyen Huu Loc, a final-year Information Technology student at Ho Chi Minh City University of
+                Industry and Trade (HUIT). I am passionate about application programming and artificial intelligence. I
+                specialize in building intuitive mobile and desktop applications, as well as training machine learning
+                models.</p>
+            <a icon="" ;style="display: inline-block; margin-top: 20px;" href="/assets/2001230468_Nguyễn Hữu Lộc.pdf"
+                target="_blank">My CV</a>
+        </section>
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="slider-wrapper">
+                <button class="slider-control prev" aria-label="Previous Slide">&#10094;</button>
+                <div class="projects-slider" id="projects-slider">
+                    <!-- Smartspend -->
+                    <div class="project-card">
+                        <div class="project-card-image">
+                            <img src="pics/project_smartspend.png" alt="Smartspend Mockup">
+                        </div>
+                        <div class="project-card-info">
+                            <h3>Smartspend</h3>
+                            <p>A Flutter project for personal finance management, allowing users to track expenses and manage budgets efficiently.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">Dart</span>
+                                <span class="project-tag">Finance</span>
+                            </div>
+                            <a href="https://github.com/huuloc4399/Smartspend" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Music Queue -->
+                    <div class="project-card">
+                        <div class="project-card-image">
+                            <img src="pics/project_musicqueue.png" alt="Music Queue Mockup">
+                        </div>
+                        <div class="project-card-info">
+                            <h3>Music Queue</h3>
+                            <p>A lightweight, automated system designed for streamers to manage a YouTube playback queue seamlessly.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">YouTube API</span>
+                                <span class="project-tag">Automation</span>
+                            </div>
+                            <a href="https://github.com/huuloc4399/Music_Queue" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Student Attendance -->
+                    <div class="project-card">
+                        <div class="project-card-image">
+                            <img src="pics/project_attendance.png" alt="Student Attendance Management Mockup">
+                        </div>
+                        <div class="project-card-info">
+                            <h3>Student Attendance</h3>
+                            <p>A Windows Forms application developed in C# for managing student attendance records in educational institutions.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">Windows Forms</span>
+                                <span class="project-tag">Database</span>
+                            </div>
+                            <a href="https://github.com/huuloc4399/Student-Attendance-Management-Application" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-control next" aria-label="Next Slide">&#10095;</button>
             </div>
-            <div class="menu-icon" onclick="toggleMenu()">
-                &#9776;
-            </div>
-            <nav id="navbar">
-                <ul>
-                   <li><a href="https://github.com/huuloc4399">Github</a></li>
-                   <li><a href="blog/blog.html">Blogs</a></li>
-                   <li><a href="project/project.html">Projects</a></li>
-                   <li><a href="https://www.facebook.com/huuloc4399.miku/">Facebook</a></li>
-                   <li><a style="display: inline-block; margin-top: 20px;" href="/assets/2001230468_Nguyễn Hữu Lộc.pdf" target="_blank">📄 My CV</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="intro">
-                <h1>My portfolio</h1>
-                <p>Hi, I am Nguyen Huu Loc, a final-year Information Technology student at Ho Chi Minh City University of Industry and Trade (HUIT). I am passionate about application programming and artificial intelligence. I specialize in building intuitive mobile and desktop applications, as well as training machine learning models.</p>
-                <a icon="";style="display: inline-block; margin-top: 20px;" href="/assets/2001230468_Nguyễn Hữu Lộc.pdf" target="_blank">My CV</a>
-            </section>
-            <section id="blog">
-                <h2>Latest Blog Posts</h2>
-                <section id="blog-section"></section>
-            </section>
-            <section id="chill">
-                <h2>Chill</h2>
-                <video width="320" height="240" controls>
-                    <source src="videos/ScholarDoggo - hatsune miku dancing with doodle song.mp4" type="video/mp4">
-                </video>
-            </section>
-        </main>
-        <script src="javascript.js"></script>
-    </body>
+        </section>
+        <section id="blog">
+            <h2>Latest Blog Posts</h2>
+            <section id="blog-section"></section>
+        </section>
+        <section id="chill">
+            <h2>Chill</h2>
+            <video width="320" height="240" controls>
+                <source src="videos/ScholarDoggo - hatsune miku dancing with doodle song.mp4" type="video/mp4">
+            </video>
+        </section>
+    </main>
+    <script src="javascript.js"></script>
+</body>
